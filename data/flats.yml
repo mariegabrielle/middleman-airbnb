@@ -1,0 +1,21 @@
+seb:
+  city: "paris"
+  country: "France"
+  title: "Sebastien's home"
+  description: "Charming room in Montmartre"
+  rating: 4
+  github_name: "ssaunier"
+boris:
+  city: "montreal"
+  country: "Canada"
+  title: "MG's home"
+  description: "Awesome loft in the city centre"
+  rating: 5
+  github_name: "mariegabrielle"
+romain:
+  city: "london"
+  country: "UK"
+  title: "Romain's home"
+  description: "Nice flat in Picadilly"
+  rating: 3
+  github_name: "monsieurpaillard"

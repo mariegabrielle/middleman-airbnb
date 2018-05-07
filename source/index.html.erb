@@ -1,15 +1,41 @@
----
-title: Le Wagon - Middleman
----
-
-<div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
+<!-- Banner -->
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/montreal');">
+  <div class="banner-content">
+    <h1>Welcome Home</h1>
+    <p>Book unique homes and experience a city like a local.</p>
+    <form action="#" class="form-inline">
+      <input type="text" class="form-control input-lg" placeholder="Where?">
+      <input type="text" class="form-control input-lg" placeholder="When?">
+      <select name="" id="" class="form-control input-lg">
+        <option value="1">1 guest</option>
+        <option value="2">2 guests</option>
+        <option value="3">3 guests</option>
+      </select>
+      <input type="submit" class="btn btn-primary btn-lg" value="Search">
+    </form>
   </div>
 </div>
+<!-- cards -->
+<div class="container">
+  <h2 class="text-center">Recent Flats</h2>
+  <div class="row">
+    <% data.flats.each do |flat, infos| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: url(https://kitt.lewagon.com/placeholder/cities/<%= infos.city %>)">
+          <span class="card-category"><%= infos.city %>, <%= infos.country %></span>
+          <img src="https://kitt.lewagon.com/placeholder/users/<%= infos.github_name %>" class="card-user">
+            <div class="card-description">
+              <h3><%= infos.title %></h3>
+              <p ><%= infos.description %></p>
+              <p><%= infos.rating %></p>
+            </div>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
